@@ -1,21 +1,21 @@
 public class BubbleSort {
 
 
-  // this is code of bubble sort
+  // this is code of bubble s
   static void bubbleSort(int [] array){
-    for(int i=0;i<=array.length;i++){
-        boolean flag = false;
-        for(int j=i+1;j<array.length;j++){
-          if(array[j]<array[i]){
+    int n = array.length;
+    for(int i=1;i<n;i++){
+      boolean flag = false;
+      for(int j=0;j<n-i;j++){
+           if(array[j]>array[j+1]){
             int temp = array[j];
-            array[j] = array[i];
-            array[i] = temp;
-            flag = true;
-          }
-        }
-        if(!flag){
-          break;
-        }
+            array[j] = array[j+1];
+            array[j+1] = temp;
+           }
+      }
+      if(!flag){
+        break;
+      }
     }
   }
   public static void main(String[] args) {
