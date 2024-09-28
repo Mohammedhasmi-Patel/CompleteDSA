@@ -20,9 +20,26 @@ public class InsertionSort {
       }
     }
   }
+
+  // decreasing order 
+  static void insertionSortDecreasing(int [] array){
+    int n = array.length;
+    for(int i=1;i<n;i++){
+         for(int j=i;j>0;j--){
+          if(array[j]>array[j-1]){
+            int temp = array[j];
+            array[j] = array[j-1];
+            array[j-1] = temp;
+           }
+          else{
+            break;
+          }
+        }
+    }
+  }
   public static void main(String[] args) {
-    int[] arr = {4,3,5,1,2};
-    insertionSort(arr);
+    int[] arr = {3,1,2,4,5};
+    insertionSortDecreasing(arr);
     for (int i : arr) {
       System.out.print(i+" ");
     }
